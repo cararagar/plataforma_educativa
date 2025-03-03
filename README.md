@@ -25,14 +25,6 @@ Una aplicación web robusta diseñada para gestionar portales educativos. La pla
   - Página principal de bienvenida con botón de "Iniciar Sesión".
   - Página de contacto accesible desde el Navbar en todas las dashboards.
 
-## Estructura del Proyecto
-
-La estructura de carpetas es la siguiente:
-
-plataforma-educativa/ ├── node_modules/ ├── public/ │ ├── index.html │ └── favicon.ico ├── src/ │ ├── assets/ # Recursos estáticos (imágenes, fuentes, etc.) │ ├── components/ │ │ ├── auth/ # Componentes de autenticación (Login.js) │ │ ├── contact/ # Página de contacto (Contact.js) │ │ ├── dashboard/ # Dashboards para usuario, profesor y administrador │ │ │ ├── UserDashboard.js │ │ │ ├── TeacherDashboard.js │ │ │ └── AdminDashboard.js │ │ ├── home/ # Página de inicio (Home.js) │ │ ├── layout/ # Layout general (Header.js, Footer.js, ResponsiveLayout.js) │ │ └── common/ # Componentes comunes (LogoutButton.js) │ ├── context/ # Contextos globales (AuthContext.js) │ ├── i18n/ # Configuración de internacionalización y archivos de traducción │ │ ├── i18n.js │ │ └── locales/ │ │ ├── en/
-│ │ │ └── translation.json │ │ └── es/ │ │ └── translation.json │ ├── routes/ # Rutas protegidas (PrivateRoute.js) │ ├── services/ # Servicios para llamadas a la API (courseService.js) │ ├── App.js # Componente principal con la configuración de rutas │ ├── index.js # Punto de entrada, importa Bootstrap e i18n │ └── index.css # Estilos globales ├── package.json └── README.md
-
-
 ## Tecnologías Utilizadas
 
 - **React:** Librería para construir interfaces de usuario.
@@ -63,18 +55,3 @@ Inicia el servidor de desarrollo:
 ```sh
 npm start
 
-La aplicación se abrirá en tu navegador en http://localhost:3000.
-
-Construir para Producción
-Para crear una versión optimizada para producción:
-npm run build
-
-Configuración de Internacionalización
-Los archivos de traducción se encuentran en:
-
-src/i18n/locales/es/translation.json
-src/i18n/locales/en/translation.json
-Puedes actualizar estos archivos para modificar los textos de la aplicación. El cambio de idioma se realiza mediante botones ubicados en el Header.
-
-Contribución
-Si deseas contribuir al proyecto, por favor crea un fork y envía un pull request. Para cambios importantes, abre primero un issue para discutir las modificaciones propuestas.
