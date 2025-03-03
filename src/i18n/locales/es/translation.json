@@ -1,13 +1,76 @@
 {
+  "welcome_message": "Bienvenido a la Plataforma Educativa",
+  "role": "Rol",
+  "my_courses": "Mis Cursos",
+  "manage_courses": "Aquí puedes ver y administrar tus cursos inscritos.",
+  "study_materials": "Materiales de Estudio",
+  "access_materials": "Accede a los recursos disponibles para el estudio.",
+  "forums": "Foros",
+  "participate_forums": "Participa en los foros de discusión.",
+  "please_login": "Por favor, inicia sesión para continuar",
+  "contact_title": "Contáctanos",
+  "contact_description": "Si tienes alguna duda o comentario, por favor escríbenos.",
+  "name": "Nombre",
+  "enter_name": "Ingresa tu nombre",
+  "email": "Correo electrónico",
+  "enter_email": "Ingresa tu correo",
+  "message": "Mensaje",
+  "enter_message": "Ingresa tu mensaje",
+  "send": "Enviar",
+  "site": {
+    "title": "Plataforma Educativa",
+    "subtitle": "Una experiencia de aprendizaje interactiva",
+    "footer": "© 2025 Plataforma Educativa. Todos los derechos reservados."
+  },
+  "header": {
+    "dashboard": "Panel",
+    "courses": "Cursos",
+    "contact": "Contacto",
+    "language": "Idioma"
+  },
+  "home": {
     "welcome_message": "Bienvenido a la Plataforma Educativa",
-    "login": "Iniciar Sesión",
-    "dashboard": "Panel de Usuario",
-    "role": "Rol",
-    "my_courses": "Mis Cursos",
-    "manage_courses": "Aquí puedes ver y administrar tus cursos inscritos.",
-    "study_materials": "Materiales de Estudio",
-    "access_materials": "Accede a los recursos disponibles para el estudio.",
-    "forums": "Foros",
-    "participate_forums": "Participa en los foros de discusión."
+    "please_login": "Por favor, inicia sesión para continuar",
+    "login": "Iniciar Sesión"
+  },
+  "login": {
+    "username": "Usuario",
+    "password": "Contraseña",
+    "submit": "Ingresar"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "Si tienes alguna duda o comentario, por favor escríbenos.",
+    "name": "Nombre",
+    "enter_name": "Ingresa tu nombre",
+    "email": "Correo electrónico",
+    "enter_email": "Ingresa tu correo",
+    "message": "Mensaje",
+    "enter_message": "Ingresa tu mensaje",
+    "send": "Enviar"
+  },
+  "dashboard": {
+    "user": {
+      "title": "Panel del Estudiante",
+      "courses": "Mis Cursos",
+      "materials": "Materiales de Estudio",
+      "forums": "Foros de Discusión",
+      "evaluations": "Evaluaciones"
+    },
+    "teacher": {
+      "title": "Panel del Profesor",
+      "courses": "Mis Cursos",
+      "materials": "Materiales de Curso",
+      "evaluations": "Evaluaciones",
+      "announcements": "Anuncios"
+    },
+    "admin": {
+      "title": "Panel del Administrador",
+      "overview": "Resumen",
+      "users": "Usuarios",
+      "courses": "Cursos",
+      "settings": "Configuración",
+      "reports": "Reportes"
+    }
   }
-  
+}

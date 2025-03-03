@@ -1,11 +1,22 @@
+// src/components/layout/Header.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LogoutButton from '../common/LogoutButton';
+import { useAuth } from '../../context/AuthContext';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { user } = useAuth();
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <header className="navbar navbar-expand-lg navbar-dark bg-dark" role="banner">
       <div className="container">
-        <Link className="navbar-brand" to="/">Plataforma Educativa</Link>
+        <Link className="navbar-brand" to="/">{t('site.title')}</Link>
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -13,23 +24,44 @@ const Header = () => {
           data-bs-target="#navbarNav"
           aria-controls="navbarNav" 
           aria-expanded="false" 
-          aria-label="Alternar navegación"
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <nav className="collapse navbar-collapse" id="navbarNav" role="navigation">
-          <ul className="navbar-nav ms-auto">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item">
-              <Link className="nav-link" to="/dashboard">Dashboard</Link>
+              <Link className="nav-link" to="/dashboard">{t('header.dashboard')}</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/cursos">Cursos</Link>
+              <Link className="nav-link" to="/contacto">{t('header.contact')}</Link>
             </li>
+            {/* Botón de cambio de idioma con grupo de botones */}
             <li className="nav-item">
-              <Link className="nav-link" to="/contacto">Contacto</Link>
+              <div className="btn-group ms-3" role="group" aria-label={t('header.language')}>
+                <button 
+                  type="button" 
+                  className="btn btn-outline-light"
+                  onClick={() => changeLanguage('es')}
+                >
+                  ES
+                </button>
+                <button 
+                  type="button" 
+                  className="btn btn-outline-light"
+                  onClick={() => changeLanguage('en')}
+                >
+                  EN
+                </button>
+              </div>
             </li>
+            {user && (
+              <li className="nav-item ms-3">
+                <LogoutButton />
+              </li>
+            )}
           </ul>
-        </nav>
+        </div>
       </div>
     </header>
   );

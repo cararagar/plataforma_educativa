@@ -1,3 +1,4 @@
+// src/context/AuthContext.js
 import React, { createContext, useContext, useState } from 'react';
 
 const AuthContext = createContext();
@@ -5,22 +6,10 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
-  // Simulación de autenticación. En producción, realiza una llamada a la API.
-  const login = async (username, password) => {
-    let role = 'student';
-    if (username.toLowerCase() === 'admin') role = 'admin';
-    else if (username.toLowerCase() === 'profesor') role = 'teacher';
-
-    const fakeResponse = {
-      success: true,
-      data: { username, role }
-    };
-
-    if (fakeResponse.success) {
-      setUser(fakeResponse.data);
-      return true;
-    }
-    return false;
+  // Ahora la función login recibe username y role para actualizar el estado
+  const login = (username, role) => {
+    // Simulación: se actualiza el estado con los datos proporcionados
+    setUser({ username, role });
   };
 
   const logout = () => {

@@ -1,13 +1,76 @@
 {
+  "welcome_message": "Welcome to the Educational Platform",
+  "role": "Role",
+  "my_courses": "My Courses",
+  "manage_courses": "Here you can view and manage your enrolled courses.",
+  "study_materials": "Study Materials",
+  "access_materials": "Access available study resources.",
+  "forums": "Forums",
+  "participate_forums": "Participate in discussion forums.",
+  "please_login": "Please log in to continue",
+  "contact_title": "Contact Us",
+  "contact_description": "If you have any questions or comments, please write to us.",
+  "name": "Name",
+  "enter_name": "Enter your name",
+  "email": "Email",
+  "enter_email": "Enter your email",
+  "message": "Message",
+  "enter_message": "Enter your message",
+  "send": "Send",
+  "site": {
+    "title": "Educational Platform",
+    "subtitle": "An interactive learning experience",
+    "footer": "© 2025 Educational Platform. All rights reserved."
+  },
+  "header": {
+    "dashboard": "Dashboard",
+    "courses": "Courses",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "home": {
     "welcome_message": "Welcome to the Educational Platform",
-    "login": "Login",
-    "dashboard": "User Dashboard",
-    "role": "Role",
-    "my_courses": "My Courses",
-    "manage_courses": "Here you can view and manage your enrolled courses.",
-    "study_materials": "Study Materials",
-    "access_materials": "Access available study resources.",
-    "forums": "Forums",
-    "participate_forums": "Participate in discussion forums."
+    "please_login": "Please log in to continue",
+    "login": "Login"
+  },
+  "login": {
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign In"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "If you have any questions or comments, please reach out to us.",
+    "name": "Name",
+    "enter_name": "Enter your name",
+    "email": "Email",
+    "enter_email": "Enter your email",
+    "message": "Message",
+    "enter_message": "Enter your message",
+    "send": "Send"
+  },
+  "dashboard": {
+    "user": {
+      "title": "Student Dashboard",
+      "courses": "My Courses",
+      "materials": "Study Materials",
+      "forums": "Discussion Forums",
+      "evaluations": "Evaluations"
+    },
+    "teacher": {
+      "title": "Teacher Dashboard",
+      "courses": "My Courses",
+      "materials": "Course Materials",
+      "evaluations": "Evaluations",
+      "announcements": "Announcements"
+    },
+    "admin": {
+      "title": "Admin Dashboard",
+      "overview": "Overview",
+      "users": "Users",
+      "courses": "Courses",
+      "settings": "Settings",
+      "reports": "Reports"
+    }
   }
-  
+}
