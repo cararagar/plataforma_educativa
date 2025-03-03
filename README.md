@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Plataforma Educativa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación web robusta diseñada para gestionar portales educativos. La plataforma ofrece funciones integrales para la administración de cursos, gestión de materiales de estudio, foros de discusión y evaluaciones, con dashboards personalizados para estudiantes, profesores y administradores. Además, la aplicación incorpora autenticación basada en roles, internacionalización y un diseño responsive que se adapta a cualquier dispositivo.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- **Autenticación y Roles:**  
+  - Inicio de sesión con validación de credenciales para tres roles: administrador, profesor y estudiante.
+  - Botón de cierre de sesión (Logout) visible en el Header.
 
-### `npm start`
+- **Dashboards Personalizados:**  
+  - **Estudiante:** Visualización de cursos inscritos, materiales de estudio, foros de discusión y evaluaciones.
+  - **Profesor:** Funciones para crear y administrar cursos, subir materiales, evaluar participaciones y publicar anuncios.
+  - **Administrador:** Panel con resumen del sistema, gestión de usuarios y cursos, configuración y reportes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Internacionalización:**  
+  - Cambio dinámico de idioma (ES/EN) en toda la aplicación mediante **react-i18next**.
+  - Archivos JSON para traducción de todos los textos de la aplicación.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Diseño Responsive y Accesible:**  
+  - Interfaz adaptada a diferentes dispositivos utilizando **Bootstrap**.
+  - Uso de HTML semántico y atributos ARIA para mejorar la accesibilidad.
 
-### `npm test`
+- **Navegación y Páginas Adicionales:**  
+  - Página principal de bienvenida con botón de "Iniciar Sesión".
+  - Página de contacto accesible desde el Navbar en todas las dashboards.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Estructura del Proyecto
 
-### `npm run build`
+La estructura de carpetas es la siguiente:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+plataforma-educativa/ ├── node_modules/ ├── public/ │ ├── index.html │ └── favicon.ico ├── src/ │ ├── assets/ # Recursos estáticos (imágenes, fuentes, etc.) │ ├── components/ │ │ ├── auth/ # Componentes de autenticación (Login.js) │ │ ├── contact/ # Página de contacto (Contact.js) │ │ ├── dashboard/ # Dashboards para usuario, profesor y administrador │ │ │ ├── UserDashboard.js │ │ │ ├── TeacherDashboard.js │ │ │ └── AdminDashboard.js │ │ ├── home/ # Página de inicio (Home.js) │ │ ├── layout/ # Layout general (Header.js, Footer.js, ResponsiveLayout.js) │ │ └── common/ # Componentes comunes (LogoutButton.js) │ ├── context/ # Contextos globales (AuthContext.js) │ ├── i18n/ # Configuración de internacionalización y archivos de traducción │ │ ├── i18n.js │ │ └── locales/ │ │ ├── en/
+│ │ │ └── translation.json │ │ └── es/ │ │ └── translation.json │ ├── routes/ # Rutas protegidas (PrivateRoute.js) │ ├── services/ # Servicios para llamadas a la API (courseService.js) │ ├── App.js # Componente principal con la configuración de rutas │ ├── index.js # Punto de entrada, importa Bootstrap e i18n │ └── index.css # Estilos globales ├── package.json └── README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tecnologías Utilizadas
 
-### `npm run eject`
+- **React:** Librería para construir interfaces de usuario.
+- **React Router:** Manejo de rutas y navegación en Single Page Applications (SPA).
+- **Context API:** Gestión del estado de autenticación y roles.
+- **react-i18next / i18next:** Internacionalización y cambio dinámico de idioma.
+- **Bootstrap:** Framework CSS para diseño responsive.
+- **Axios:** Llamadas AJAX a APIs (simuladas en este ejemplo).
+- **Socket.io Client:** Comunicación en tiempo real (para foros, si se implementa).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Instalación y Uso
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerrequisitos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Node.js](https://nodejs.org/) (versión recomendada 14.x o superior)
+- npm (incluido con Node.js)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Instalación
 
-## Learn More
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/plataforma-educativa.git
+   cd plataforma-educativa
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Ejecución en Desarrollo
+Inicia el servidor de desarrollo:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm start
 
-### Code Splitting
+La aplicación se abrirá en tu navegador en http://localhost:3000.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Construir para Producción
+Para crear una versión optimizada para producción:
+npm run build
 
-### Analyzing the Bundle Size
+Configuración de Internacionalización
+Los archivos de traducción se encuentran en:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+src/i18n/locales/es/translation.json
+src/i18n/locales/en/translation.json
+Puedes actualizar estos archivos para modificar los textos de la aplicación. El cambio de idioma se realiza mediante botones ubicados en el Header.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contribución
+Si deseas contribuir al proyecto, por favor crea un fork y envía un pull request. Para cambios importantes, abre primero un issue para discutir las modificaciones propuestas.
